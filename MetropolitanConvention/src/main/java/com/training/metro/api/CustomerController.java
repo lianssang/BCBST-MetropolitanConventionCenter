@@ -31,7 +31,7 @@ public class CustomerController {
 		return repo.findById(customerId);
 	}
 	
-	@PostMapping("/addCustomer")
+	@PostMapping
 	public ResponseEntity<?> addCustomer(@RequestBody Customer newCustomer, UriComponentsBuilder uri) {
 		if(newCustomer.getId()!=0 || newCustomer.getLast_name()==null || newCustomer.getFirst_name()==null
 				//|| newCustomer.getEmail()== null
