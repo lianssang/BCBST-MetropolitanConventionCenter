@@ -33,7 +33,7 @@ public class CustomerController {
 	
 	@PostMapping
 	public ResponseEntity<?> addCustomer(@RequestBody Customer newCustomer, UriComponentsBuilder uri) {
-		if(newCustomer.getId()!=0 || newCustomer.getLast_name()==null || newCustomer.getFirst_name()==null
+		if( newCustomer.getLast_name()==null || newCustomer.getFirst_name()==null
 				//|| newCustomer.getEmail()== null
 				) {
 			return ResponseEntity.badRequest().build();
